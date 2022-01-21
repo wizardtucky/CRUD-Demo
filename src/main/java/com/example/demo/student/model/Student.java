@@ -5,16 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Table
 public class Student {
 
     @Id
@@ -23,5 +23,10 @@ public class Student {
 
     private String name;
     private Integer age;
-
+    @ManyToOne
+    @JoinColumn(name = "president_id")
+    private President president;
+//
+//    @OneToMany
+//    private List<President> Presidents;
 }

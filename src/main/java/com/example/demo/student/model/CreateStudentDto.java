@@ -8,4 +8,5 @@ import lombok.Data;
 public class CreateStudentDto {
     private String name;
     private Integer age;
+    private President president;
 }

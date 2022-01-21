@@ -1,8 +1,10 @@
-package com.example.demo.student;
+package com.example.demo.student.services;
 
+import com.example.demo.student.mappers.StudentMapper;
 import com.example.demo.student.model.CreateStudentDto;
 import com.example.demo.student.model.Student;
 import com.example.demo.student.model.StudentDto;
+import com.example.demo.student.repositories.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -16,7 +18,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class StudentService {
 
-    private  final StudentRepository studentRepository;
+    private final StudentRepository studentRepository;
 
     public StudentDto createStudent(CreateStudentDto createStudentDto){
         Student newStudent = StudentMapper.toStudent(createStudentDto);

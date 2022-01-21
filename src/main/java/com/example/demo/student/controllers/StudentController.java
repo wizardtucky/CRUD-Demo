@@ -1,5 +1,6 @@
-package com.example.demo.student;
+package com.example.demo.student.controllers;
 
+import com.example.demo.student.services.StudentService;
 import com.example.demo.student.model.CreateStudentDto;
 import com.example.demo.student.model.Student;
 import com.example.demo.student.model.StudentDto;
